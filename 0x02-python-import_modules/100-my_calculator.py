@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import calculator_1 as C
+    import calculator_1 as c
     import sys
 
     operator = {
@@ -19,16 +19,16 @@ if __name__ == "__main__":
         b = int(sys.argv[3])
         for char in sys.argv:
             if sys.argv[2] == operator.get("add"):
-                print("{} + {} = {}".format(a, b, C.add(a, b)))
+                print("{} + {} = {}".format(a, b, c.add(a, b)))
                 break
             elif sys.argv[2] == operator.get("sub"):
-                print("{} - {} = {}".format(a, b, C.sub(a, b)))
+                print("{} - {} = {}".format(a, b, c.sub(a, b)))
                 break
             elif sys.argv[2] == operator.get("mul"):
-                print("{} * {} = {}".format(a, b, C.mul(a, b)))
+                print("{} * {} = {}".format(a, b, c.mul(a, b)))
                 break
             elif sys.argv[2] == operator.get("div"):
-                print("{} / {} = {:.2f}".format(a, b, C.div(a, b)))
+                print("{} / {} = {:.2f}".format(a, b, c.div(a, b)))
                 break
             else:
                 print("Unknown operator. Available operators: +, -, * and /")
