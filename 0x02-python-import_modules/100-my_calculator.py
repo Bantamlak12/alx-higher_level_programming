@@ -14,25 +14,21 @@ if __name__ == "__main__":
     if args != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
-    if sys.argv[1].isdigit and sys.argv[3].isdigit():
+
+    if sys.argv[1].isdigit() and sys.argv[3].isdigit():
         a = int(sys.argv[1])
         b = int(sys.argv[3])
-        for char in sys.argv:
-            if sys.argv[2] == operator.get("add"):
-                print("{} + {} = {}".format(a, b, c.add(a, b)))
-                break
-            elif sys.argv[2] == operator.get("sub"):
-                print("{} - {} = {}".format(a, b, c.sub(a, b)))
-                break
-            elif sys.argv[2] == operator.get("mul"):
-                print("{} * {} = {}".format(a, b, c.mul(a, b)))
-                break
-            elif sys.argv[2] == operator.get("div"):
-                print("{} / {} = {:.2f}".format(a, b, c.div(a, b)))
-                break
-            else:
-                print("Unknown operator. Available operators: +, -, * and /")
-                exit(1)
+        if sys.argv[2] == operator.get("add"):
+            print("{} + {} = {}".format(a, b, c.add(a, b)))
+        elif sys.argv[2] == operator.get("sub"):
+            print("{} - {} = {}".format(a, b, c.sub(a, b)))
+        elif sys.argv[2] == operator.get("mul"):
+            print("{} * {} = {}".format(a, b, c.mul(a, b)))
+        elif sys.argv[2] == operator.get("div"):
+            print("{} / {} = {:.2f}".format(a, b, c.div(a, b)))
+        else:
+            print("Unknown operator. Available operators: +, -, * and /")
+            exit(1)
     else:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
