@@ -8,7 +8,7 @@
  */
 void print_python_list_info(PyObject *p)
 {
-	Py_ssize_t, i;
+	unsigned long int i;
 	PyListObject *list;
 	PyObject *item;
 
