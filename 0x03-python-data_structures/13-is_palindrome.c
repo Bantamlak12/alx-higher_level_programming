@@ -23,17 +23,21 @@ int is_palindrome(listint_t **head)
 	}
 	*head = prev_node;
 
-	if (*head == NULL || (*head)->next == NULL)
+	if (ptr == NULL || ptr->next == NULL)
 		return (1);
 
-	while (ptr != NULL)
+	while (ptr->next != NULL)
+	{
 		ptr = ptr->next;
+	}
 
-	while (*head != NULL)
+	while ((*head)->next != NULL)
+	{
 		*head = (*head)->next;
+	}
 
 	if (ptr == *head)
 		return (1);
-	else
-		return (0);
+
+	return (0);
 }
