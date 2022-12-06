@@ -12,7 +12,6 @@ int is_palindrome(listint_t **head)
 	listint_t *next_node = *head;
 	listint_t *current_node = *head;
 	listint_t *ptr = *head;
-	listint_t *h = *head;
 	listint_t *prev_node = NULL;
 
 	while (next_node != NULL)
@@ -26,10 +25,10 @@ int is_palindrome(listint_t **head)
 	while (ptr != NULL)
 		ptr = ptr->next;
 
-	while (h != NULL)
-		h = h->next;
+	while (*head != NULL)
+		*head = (*head)->next;
 
-	if (ptr == h || h == NULL)
+	if (ptr == *head || *head == NULL || ptr == NULL)
 		return (1);
 	else
 		return (0);
