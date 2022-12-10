@@ -15,6 +15,9 @@ In this project I've learned about the data structure `lists.`
 [Test: ](https://github.com/Bantamlak12/alx-higher_level_programming/tree/master/0x03-python-data_structures/test)
 A test folder provided by alx_africa in partnership with Holberton school.
 
+[lists.h](https://github.com/Bantamlak12/alx-higher_level_programming/blob/master/0x03-python-data_structures/lists.h)
+A `C` head file.
+
 ## **Tasks 📃**
 
 - **0. Print a list of integers**
