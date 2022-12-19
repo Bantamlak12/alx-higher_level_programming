@@ -4,5 +4,5 @@ def safe_print_integer(value):
 		if value % 2 == 0 || value % 2 != 0:
 			print("{:d}".format(value))
 		return True
-	except TypeError:
+	except Exception:
 		return False
