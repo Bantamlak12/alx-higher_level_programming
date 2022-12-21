@@ -47,7 +47,7 @@ class Square:
     def my_print(self):
         """prints a square hash"""
         if self.__size == 0:
-            print("L")
+            print("")
         else:
             for i in range(self.__position[1]):
                 print("")
