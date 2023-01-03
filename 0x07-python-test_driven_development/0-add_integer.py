@@ -1,17 +1,16 @@
 #!/usr/bin/python3
-"""A module that adds two integers
-
-   a and b must be integers or float, otherwise raise TypeError exception
-   with the message 'a must be an integer' or 'b must be an integer'
-"""
+"""A module that adds two integers"""
 
 
 def add_integer(a, b=98):
     """Integer addition
 
     Args:
-        a: integer or float number
-        b: integer or float number
+        a (int/float): integer or float number
+        b (int/float): integer or float number
+
+    Raise:
+        TypeError: if a and b are not either integer or float
 
     Return:
         the addition of a and b

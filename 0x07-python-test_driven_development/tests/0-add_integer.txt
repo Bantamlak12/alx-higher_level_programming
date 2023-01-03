@@ -4,7 +4,6 @@ How to use ``0-add_integer`` module
 
 This module defines a function ``add_integer(a, b=98)``.
 
-=====
 usage
 =====
 
@@ -15,7 +14,7 @@ It uses the '+' math operator.
 Importing function
 	>>> add_integer = __import__('0-add_integer').add_integer
 
-Examples:
+Tests:
 
 case 1: Two positive numbers:
 	>>> add_integer(2, 7)
