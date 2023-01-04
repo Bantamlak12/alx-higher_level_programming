@@ -69,3 +69,32 @@ case 5: when the ``div`` is not even integer or float
 	>>> matrix_divided(matrix, 'hello')
 	Traceback (most recent call last):
 	TypeError: div must be a number
+
+case 6: when div is negative
+	>>> matrix = [
+	...		[2, 4, 14],
+	...		[10, 3, 4]
+	...	]
+	>>> matrix_divided(matrix, -3)
+	[[-0.67, -1.33, -4.67], [-3.33, -1.0, -1.33]]
+
+case 7: when div is zero
+	>>> matrix_divided(matrix, 0)
+	Traceback (most recent call last):
+	ZeroDivisionError: division by zero
+
+case 8: when div is float('inf')
+	>>> matrix_divided(matrix, float('inf'))
+	[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+case 9: when missing one argument
+	>>> matrix_divided(matrix)
+	Traceback (most recent call last):
+	TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+case 10: when missing two positional arguments
+	>>> matrix_divided()
+	Traceback (most recent call last):
+	TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+============================================================================================
