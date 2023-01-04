@@ -47,3 +47,21 @@ case 7: When one of the argument is not even float or int:
 	>>> add_integer(5, "Hi")
 	Traceback (most recent call last):
 	TypeError: b must be an integer
+
+case 8: When float overflow present
+	>>> add_integer(float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+	>>> add_integer(5, float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+casse 9: When float NaN present
+	>>> add_integer(float('nan'))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
+	>>> add_integer(float('nan'), 7)
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
+
+==============================================================================
