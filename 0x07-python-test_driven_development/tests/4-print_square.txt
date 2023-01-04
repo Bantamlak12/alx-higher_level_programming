@@ -42,7 +42,17 @@ case 4: when size is float number
 	Traceback (most recent call last):
 	TypeError: size must be an integer
 
-case 5: when size is none integer
+case 5: when size is string
 	>>> print_square('Hello')
 	Traceback (most recent call last):
 	TypeError: size must be an integer
+	>>> print_square(-2)
+	Traceback (most recent call last):
+	ValueError: size must be >= 0
+
+case 6: when missing argument
+	>>> print_square()
+	Traceback (most recent call last):
+	TypeError: print_square() missing 1 required positional argument: 'size'
+
+==============================================================================
