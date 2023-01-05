@@ -38,3 +38,14 @@ class TestMaxInteger(unittest.TestCase):
         """Tests when all lists are float"""
 
         self.assertEqual(max_integer([2, 4, 6.7, 4.6, 1]), 6.7)
+
+    def test_empty(self):
+        """Tests when a list is empty"""
+
+        self.assertEqual(max_integer([]), None)
+
+    def test_nameError(self):
+            """Tests when a list contains a name error"""
+
+            with self.assertRaises(NameError):
+                self.assertNotEqual(max_integer([4, five, 7, 4]), 7)
