@@ -70,9 +70,26 @@ case 9: if one element of those list of lists is not an integer or a float
 	Traceback (most recent call last):
 	ValueError: data type must provide an itemsize
 
+	>>> lazy_matrix_mul([[4, "6"], [4, 7]], [[2, 4], [1, 7]])
+	Traceback (most recent call last):
+	ValueError: data type must provide an itemsize
+
+	>>> lazy_matrix_mul([[4, 6], [4, 7]], [[2, 4], [1, "7"]])
+	Traceback (most recent call last):
+	ValueError: data type must provide an itemsize
+
 case 11: missing two arguments
 	>>> lazy_matrix_mul()
 	Traceback (most recent call last):
 	TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+case 12: passing a string for either arguments.
+	>>> lazy_matrix_mul("Hello", [[2, 4], [6, 8]])
+	Traceback (most recent call last):
+	TypeError: ufunc 'multiply' did not contain a loop with signature matching types dtype('<U5') dtype('<U5') dtype('<U5')
+
+	>>> lazy_matrix_mul([[2, 4], [6, 8]], "Hello")
+	Traceback (most recent call last):
+	TypeError: ufunc 'multiply' did not contain a loop with signature matching types dtype('<U5') dtype('<U5') dtype('<U5')
 
 =================================================================================
