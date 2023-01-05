@@ -45,6 +45,12 @@ class TestMaxInteger(unittest.TestCase):
         """Tests when a list is empty"""
 
         self.assertEqual(max_integer([]), None)
+    
+    def test_empty2(self):
+        """Tests when a list is empty"""
+
+        with self.assertRaises(TypeError):
+            max_integer(None)
 
     def test_nameError(self):
             """Tests when a list contains a name error"""
