@@ -22,6 +22,11 @@ class TestMaxInteger(unittest.TestCase):
         """Tests unordered list"""
 
         self.assertEqual(max_integer([3, 1, 965, 2, 0]), 965)
+ 
+    def test_oneList(self):
+        """Tests for one list"""
+
+        self.assertEqual(max_integer([5]), 5)
 
     def test_nagativeNumber(self):
         """Tests when either a list is all negative numbers or negative
