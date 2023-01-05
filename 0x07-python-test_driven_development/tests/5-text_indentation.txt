@@ -1,0 +1,51 @@
+===================================
+How to use ``5-text_indentation`` module
+===================================
+
+This module prints a text with 2 new lines after each of these characters . ? :
+
+usage
+=====
+
+Importing the function
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Tests
+
+case 1: passing no argument
+	>>> text_indentation()
+	Traceback (most recent call last):
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+case 2: passing empty string
+	>>> text_indentation("")
+	>>>
+
+case 3: passing string
+	>>> text_indentation("Hello")
+	Hello
+
+case 4: passing line of statement
+	>>> text_indentation("Object oriented programming in python.")
+	Object oriented programming in python.
+	<BLANKLINE>
+	>>> text_indentation("      Object oriented programming in python.")
+	Object oriented programming in python.
+	<BLANKLINE>
+
+case 5: passing line of statement with characters . ? :
+	>>> text_indentation("Is.python:object oriented programming?")
+	Is.
+	<BLANKLINE>
+	python:
+	<BLANKLINE>
+	object oriented programming?
+	<BLANKLINE>
+	>>>
+
+case 6: passing none string
+	>>> text_indentation(5)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+===============================================================================
