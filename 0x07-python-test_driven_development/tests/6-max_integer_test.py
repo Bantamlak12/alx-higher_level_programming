@@ -56,3 +56,7 @@ class TestMaxInteger(unittest.TestCase):
         """Tests for float infinity and NaN"""
 
         self.assertEqual(max_integer([float('inf'), 5, 2, 8]), float('inf'))
+
+
+if __name__ == "__main__":
+    unittest.main()
