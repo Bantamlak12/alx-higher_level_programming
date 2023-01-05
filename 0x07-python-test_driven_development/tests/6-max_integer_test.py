@@ -49,3 +49,8 @@ class TestMaxInteger(unittest.TestCase):
 
             with self.assertRaises(NameError):
                 self.assertNotEqual(max_integer([4, five, 7, 4]), 7)
+
+    def test_InfAndNan(self):
+        """Tests for float infinity and NaN"""
+
+        self.assertEqual(max_integer([float('inf'), 5, 2, 8]), float('inf'))
