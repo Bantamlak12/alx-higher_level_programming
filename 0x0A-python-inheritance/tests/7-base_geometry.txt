@@ -25,7 +25,8 @@ case 3: If the first argument is different from string.
 	>>> bg.integer_validator(5, 12)
 
 case 4: passing one argument, and three argument.
-	>>> bg = BaseGeometry(45)
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator(5)
 	Traceback (most recent call last):
 	TypeError: integer_validator() missing 1 required positional argument: 'value'
 
