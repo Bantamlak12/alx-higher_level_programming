@@ -45,15 +45,14 @@ class Base:
             list_objs: is a list of instances who inherits of Base
         """
 
-        filename = str(cls.__name__) + ".json"
+        filename = cls.__name__ + ".json"
 
-        with open(filename, "w") as f:
-            if list_objs is None or list_objs == []:
+        with open(filename, "w", encoding='utf-8') as f:
+            if list_objs is None or len(list_objs) == 0:
                 f.write("[]")
             else:
-                for obj in list_objs:
-                    obj_dict = obj.to_dictionary()
-                    f.write(Base.to_json_string(obj_dict))
+                obj_dict = [obj.to_dictionary() for obj in list_objs]
+                f.write(Base.to_json_string(obj_dict))
 
     @staticmethod
     def from_json_string(json_string):
