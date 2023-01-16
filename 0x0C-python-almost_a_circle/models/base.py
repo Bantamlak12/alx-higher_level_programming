@@ -91,9 +91,10 @@ class Base:
         Args:
             cls: class
         """
-        filename = str(cls.__name__) + ".json"
+        filename = cls.__name__ + ".json"
         try:
             with open(filename, "r") as f:
-                return Base.from_json_string(f.read())
-        except json.decoder.JSONDecodeError:
+                json_list = Base.from_json_string(f.read())
+                return [cls.create(**l) for l in json_list]
+        except FileNotFoundError:
             return []
