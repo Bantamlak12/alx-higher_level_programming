@@ -95,6 +95,6 @@ class Base:
         try:
             with open(filename, "r") as f:
                 json_list = Base.from_json_string(f.read())
-                return [cls.create(**l) for l in json_list]
+                return [cls.create(**li) for li in json_list]
         except FileNotFoundError:
             return []
