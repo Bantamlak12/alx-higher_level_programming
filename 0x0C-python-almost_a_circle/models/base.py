@@ -78,9 +78,9 @@ class Base:
             **dictionary (dict): key/value pairs
         """
         if cls.__name__ == "Rectangle":
-            new = cls(1, 1, 0, 0, 0)  # dummy instance with width and height
+            new = cls(1, 1)  # dummy instance with width and height
         else:
-            new = cls(1, 0, 0, 0)  # dummy instance with size
+            new = cls(1)  # dummy instance with size
         new.update(**dictionary)
         return new
 
