@@ -28,7 +28,8 @@ if __name__ == '__main__':
     result = cur.fetchone()[0]  # Extracting the first element of the tuple
     if result is not None:
         print(result)
-    print()
+    else:
+        print()
 
     cur.close()
     db.close()
