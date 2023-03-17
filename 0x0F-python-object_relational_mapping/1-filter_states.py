@@ -20,7 +20,7 @@ if __name__ == '__main__':
     cur = db.cursor()
 
     cur.execute("SELECT * from states hbtn_0e_0_usa \
-                 WHERE name LIKE 'N%' ORDER BY id ASC")
+                 WHERE name REGEXP '^N' ORDER BY id ASC")
     for row in cur.fetchall():
         print(row)
 
