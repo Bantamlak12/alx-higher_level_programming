@@ -21,13 +21,14 @@ if __name__ == '__main__':
                          db=db_name)
     cur = db.cursor()
 
-    cur.execute("SELECT GROUP_CONCAT(cities.name SEPARATOR ', ') \
-                 from states, cities WHERE states.id = cities.state_id \
-                 AND states.name = '{}' ORDER BY cities.id ASC".format(state_name))
+    cur.execute("SELECT GROUP_CONCAT(cities.name SEPARATOR ', ') from states, \
+                 cities WHERE states.id = cities.state_id AND states.name = \
+                 '{}' ORDER BY cities.id ASC".format(state_name))
 
     result = cur.fetchone()[0]  # Extracting the first element of the tuple
     if result is not None:
         print(result)
+    print()
 
     cur.close()
     db.close()
