@@ -23,10 +23,11 @@ if __name__ == '__main__':
 
     cur.execute("SELECT GROUP_CONCAT(cities.name SEPARATOR ', ') \
                  from states, cities WHERE states.id = cities.state_id \
-                 AND states.name = '{}' ORDER BY cities.id".format(state_name))
+                 AND states.name = '{}' ORDER BY cities.id ASC".format(state_name))
 
     result = cur.fetchone()[0]  # Extracting the first element of the tuple
-    print(result)
+    if result is not None:
+        print(result)
 
     cur.close()
     db.close()
