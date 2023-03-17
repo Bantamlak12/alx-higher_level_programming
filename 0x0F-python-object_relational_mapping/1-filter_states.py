@@ -19,8 +19,9 @@ if __name__ == '__main__':
                          db=db_name)
     cur = db.cursor()
 
-    cur.execute("SELECT * from states hbtn_0e_0_usa \
-                 WHERE name REGEXP '^N' ORDER BY id ASC")
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' AND \
+                 BINARY LEFT(name, 1) = 'N' ORDER BY id ASC")
+
     for row in cur.fetchall():
         print(row)
 
