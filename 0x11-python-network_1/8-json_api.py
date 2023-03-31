@@ -14,9 +14,9 @@ if __name__ == '__main__':
         letters = {'q': ""}
 
     req = requests.post(url, data=letters)
-    data = req.json()
 
     try:
+        data = req.json()
         if data:
             print("[{}] {}".format(data['id'], data['name']))
         else:
