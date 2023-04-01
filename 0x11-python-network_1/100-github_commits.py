@@ -9,7 +9,7 @@ if __name__ == '__main__':
     endpoint = 'https://api.github.com'
     user = sys.argv[1]
     repo = sys.argv[2]
-    url = f'{endpoint}/repos/{user}/{repo}/commits'
+    url = f'{endpoint}/repos/{repo}/{user}/commits'
 
     response = requests.get(url)
     if response.status_code == 200:
