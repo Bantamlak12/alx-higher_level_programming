@@ -6,12 +6,13 @@ const request = require('request');
 
 request(args[0], function (error, response) {
   if (error) {
-    console.log(error);
+    console.error(error);
+    return;
   }
   if (response.statusCode === 200) {
-    console.log('code: ', response.statusCode);
+    console.log('code:', response.statusCode);
   }
   if (response.statusCode !== 200) {
-    console.log('code: ', response.statusCode);
+    console.log('code:', response.statusCode);
   }
 });
